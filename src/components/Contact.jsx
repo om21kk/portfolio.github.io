@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
+import { resume } from "../assets";
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
@@ -38,7 +38,15 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
+      <div>
+      <p className={styles.sectionSubText}>download resume</p>
+      <a href={resume} download={resume}>
+        <button class="lex flex-col items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+          RESUME
+        </button>
+      </a>
+      </div>
+        
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
